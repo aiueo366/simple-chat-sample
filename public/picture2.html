@@ -63,11 +63,11 @@
 
       // --- センサデータ受信 ---
       socket.on("sensor", function (data) {
-        g = parseFloat(data.g); // 左右の傾き (gamma)
-        b = parseFloat(data.b); // 前後の傾き (beta)
+        g = parseFloat(data.g); // 左右
+        b = parseFloat(data.b); // 前後
         console.log("受信データ:", data);
 
-        const threshold = 10; // 傾きのしきい値
+        const threshold = 10; // 傾き
 
         
         if (Math.abs(g) > threshold || Math.abs(b) > threshold) {
